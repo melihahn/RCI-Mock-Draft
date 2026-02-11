@@ -1,16 +1,34 @@
-/* Media Query for Mobile Responsiveness */
-@media only screen and (max-width: 600px) {
-    .draft-body {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 10px;
-    }
-    .active-team-roster {
-        display: block;
-        width: 100%;
-        margin: 0 auto;
-        text-align: center;
-        font-size: 1.2em;
-    }
-}
+<html>
+<head>
+    <title>RCI Winter Golf Draft</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <h1>Welcome to the RCI Winter Golf Draft</h1>
+        <h2>Select your players and manage your draft!</h2>
+        <div id="modal" style="display:none;">
+            <h3>Player Details</h3>
+            <p id="player-details"></p>
+            <button onclick="closeModal()">Close</button>
+        </div>
+        <div id="draft-board">
+            <!-- Draft board elements here -->
+        </div>
+        <audio id="draft-sound" src="draft-sound.mp3" preload="auto"></audio>
+        <button onclick="startDraft()">Start Draft</button>
+    </div>
+    <script>
+        // Draft logic functions
+        function startDraft() {
+            // Start draft logic here
+            document.getElementById('draft-sound').play();
+            // Display draft board and manage player selection
+        }
+
+        function closeModal() {
+            document.getElementById('modal').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
